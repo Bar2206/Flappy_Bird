@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject gameOverCanvas;
 
+    public LeaderBoard leaderBoard;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,6 +52,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        leaderBoard.addScore(Score.score);
         gameOverCanvas.SetActive(true);
         Time.timeScale = 0;
     }
